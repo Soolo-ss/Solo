@@ -1,0 +1,3 @@
+E:/Solo/cmake-build-debug/CMakeFiles/Solo.dir
+E:/Solo/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Solo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
