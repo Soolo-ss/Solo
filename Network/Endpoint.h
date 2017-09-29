@@ -5,10 +5,14 @@
 #ifndef SOLO_ENDPOINT_H
 #define SOLO_ENDPOINT_H
 
+#include <sys/unistd.h>
 
-class Endpoint {
-
-};
+namespace  net {
+    class Endpoint {
+    private:
+        
+    };
+}
 
 
 #endif //SOLO_ENDPOINT_H
