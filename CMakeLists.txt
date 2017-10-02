@@ -3,5 +3,5 @@ project(Solo)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp Network/Channel.cpp Network/Channel.h Network/Endpoint.cpp Network/Endpoint.h Network/NetworkStream.cpp Network/NetworkStream.h Network/Bundle.cpp Network/Bundle.h)
+set(SOURCE_FILES main.cpp Network/Channel.cpp Network/Channel.h Network/Endpoint.cpp Network/Endpoint.h Network/NetworkStream.cpp Network/NetworkStream.h Network/Bundle.cpp Network/Bundle.h Network/Socket.cpp Network/Socket.h Common/Platform.h Common/Common.h)
 add_executable(Solo ${SOURCE_FILES})
