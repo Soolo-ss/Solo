@@ -13,13 +13,20 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#elif SOLO_PLATFORM == SOLO_PLATFORM_WIN
+
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
 #endif
 
 namespace net {
 #define UNREACHED_SCOKET ~0
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_OSX
-    using SOCKET = int;
+    using SOCK = int;
+#elif SOLO_PLATFORM == SOLO_PLATFORM_WIN
+    using SOCK = ::SOCKET;
 #endif
 
     /*
@@ -40,7 +47,7 @@ namespace net {
         int recv(void* buff, int len, unsigned int flags);
 
     private:
-        SOCKET sock_;
+        SOCK sock_;
     };
 
 }
