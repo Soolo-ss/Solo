@@ -15,4 +15,6 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <iostream>
+
 #endif //SOLO_COMMON_H

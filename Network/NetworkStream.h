@@ -12,14 +12,7 @@ namespace net {
 
     class NetworkStream {
     public:
-        NetworkStream() {
-        }
-
-        void addEndpoint(Endpoint& ep);
-
     private:
-        Endpoint self;
-        std::list<Endpoint> remote_eps;
     };
 }
 

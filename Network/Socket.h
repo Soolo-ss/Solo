@@ -17,8 +17,11 @@
 
 #include <winsock2.h>
 #include <ws2tcpip.h>
+#include <memory>
 
 #endif
+
+#include "./Common.h"
 
 namespace net {
 #define UNREACHED_SCOKET ~0
@@ -36,15 +39,21 @@ namespace net {
     public:
         Socket();
 
+        int socket();
+
         int bind(std::string address, uint8_t port);
 
         int listen(int backlog = 5);
 
-        int accept(void* addr, int addrlen);
+        std::shared_ptr<Socket> accept();
 
         int send(const void* msg, int len, int flags);
 
         int recv(void* buff, int len, unsigned int flags);
+
+        int connect(std::string address, uint8_t port);
+
+        void setFileDesc(int fd);
 
     private:
         SOCK sock_;

@@ -14,26 +14,37 @@ namespace  net {
 
     using byte = unsigned char;
     enum ENDPOINT_TYPE {
-        ENDPOINT_TYPE_SERVER,
-        ENDPOINT_TYPE_CLIENT
+        ENDPOINT_TYPE_SERVER = 1,
+        ENDPOINT_TYPE_CLIENT = 2
     };
 
+    /*
+     * 抽象了一个服务器端点或者客户端端点
+     */
     class Endpoint {
     public:
-        Endpoint(std::string, int port, ENDPOINT_TYPE ep_type);
+        using Endpoints = std::vector<Endpoint>;
 
-        constexpr ENDPOINT_TYPE type()
+        Endpoint() = delete;
+        Endpoint(std::string address, int port, int type = 1);
+
+        int type()
         {
             return type_;
         }
 
         int send(void* buff, size_t bufflen);
+
+    private:
+        void init();
+
     private:
         Socket socket_;
+        Endpoints endpoints_;
 
         std::string address_;
         int port_;
-        ENDPOINT_TYPE type_;
+        int type_;
     };
 }
 

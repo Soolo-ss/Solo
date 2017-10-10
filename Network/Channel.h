@@ -5,7 +5,7 @@
 #ifndef SOLO_CHANNEL_H
 #define SOLO_CHANNEL_H
 
-
+#include <memory>
 #include "Endpoint.h"
 #include "Bundle.h"
 
@@ -20,7 +20,7 @@ namespace net
         using ChannelID = int;
         using Bundles = std::vector<Bundle>;
 
-        Channel(Endpoint& ep, ChannelID id);
+        Channel(std::shared_ptr<Endpoint> ep, ChannelID id);
 
         void processBundles();
 
@@ -29,6 +29,8 @@ namespace net
     private:
         Bundles recvBundles_;
         Bundles sendBundles_;
+
+        std::shared_ptr<Endpoint> ep_;
     };
 }
 
