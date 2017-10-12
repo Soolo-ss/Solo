@@ -12,7 +12,6 @@ namespace net {
 
     }
 
-
     void Endpoint::init(){
         socket_.socket();
 

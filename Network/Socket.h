@@ -37,6 +37,8 @@ namespace net {
      */
     class Socket {
     public:
+        using SocketPtr = std::shared_ptr<Socket>;
+
         Socket();
 
         int socket();
@@ -45,7 +47,7 @@ namespace net {
 
         int listen(int backlog = 5);
 
-        std::shared_ptr<Socket> accept();
+        SocketPtr accept();
 
         int send(const void* msg, int len, int flags);
 

@@ -24,11 +24,11 @@ namespace net
 
         sockaddress.sin_family = AF_INET;
         sockaddress.sin_port = htons(port);
-    #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         sockaddress.sin_addr.S_un.S_addr = inet_addr(address.c_str());
-    #else
+#else
         inet_aton(address.c_str(), &sockaddress.sin_addr);
-    #endif
+#endif
 
         return ::bind(sock_, (sockaddr*)&sockaddress, sizeof(sockaddress));
     }
@@ -37,7 +37,7 @@ namespace net
         return ::listen(sock_, backlog);
     }
 
-    std::shared_ptr<Socket> Socket::accept() {
+    Socket::SocketPtr Socket::accept() {
         sockaddr_in sin;
         socklen_t sinLen = sizeof(sin);
 
