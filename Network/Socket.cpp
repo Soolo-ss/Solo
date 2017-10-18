@@ -13,8 +13,10 @@ namespace net
 
     }
 
-    int Socket::socket() {
-        setFileDesc(::socket(AF_INET, SOCK_STREAM, IPPROTO_TCP));
+    Socket::Socket(Socket &&socket)
+    {
+        sock_ = socket.sock_;
+        socket.sock_ = 0;
     }
 
     int Socket::bind(std::string address, uint8_t port) {

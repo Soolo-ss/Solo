@@ -27,9 +27,16 @@ namespace net {
 
     };
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
     class IOCPoller : public  Poller {
+    public:
+        IOCPoller();
 
+    private:
+        HANDLE iocpHandle;
     };
+
+#endif
 
 }
 #endif //SOLO_POLLER_H

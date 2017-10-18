@@ -6,30 +6,18 @@
 
 namespace net {
 
-    Endpoint::Endpoint(std::string address, int port, int type)
-        : address_(address), port_(port), type_(type)
-    {
+Endpoint::Endpoint()
+    : socket()
+{
 
-    }
+}
 
-    void Endpoint::init(){
-        socket_.socket();
+Endpoint::Endpoint(Endpoint &&ep)
+    : socket(std::move(ep.socket))
+{
 
-        if (type_ == ENDPOINT_TYPE::ENDPOINT_TYPE_SERVER) {
-            if (socket_.bind(address_, port_) == -1) {
-                std::cout << "Endpoint bind error" << std::endl;
-            }
+}
 
-            if (socket_.listen() == -1) {
-                std::cout << "Endpoint listen error" << std::endl;
-            }
-        }
-        else {
-            if (socket_.connect(address_, port_) == -1) {
-                std::cout << "Endpoint connect error" << std::endl;
-            }
-        }
-    }
 
 
 }

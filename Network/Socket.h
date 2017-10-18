@@ -40,6 +40,8 @@ namespace net {
         using SocketPtr = std::shared_ptr<Socket>;
 
         Socket();
+        Socket(const Socket& socket) = delete;
+        Socket(Socket&& socket);
 
         int socket();
 
