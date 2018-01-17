@@ -1,10 +1,15 @@
 #include <iostream>
 
-#include "Apps/LoginApp.h"
+#include "Common/ObjectPool.h"
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
 
-    LoginApp loginapp(35001);
+    solo::ObjectPool<int> pools;
+
+    std::unique_ptr<int> obj = pools.createObject();
+
+    std::cout << *obj << std::endl;
+
     return 0;
 }

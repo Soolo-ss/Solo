@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Solo
+CMAKE_SOURCE_DIR = E:\Solo\Solo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Solo\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Solo\Solo\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Solo.dir/depend.make
@@ -58,16 +58,16 @@ include CMakeFiles/Solo.dir/flags.make
 
 CMakeFiles/Solo.dir/main.cpp.obj: CMakeFiles/Solo.dir/flags.make
 CMakeFiles/Solo.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Solo.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\main.cpp.obj -c E:\Solo\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Solo.dir/main.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\main.cpp.obj -c E:\Solo\Solo\main.cpp
 
 CMakeFiles/Solo.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Solo.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\main.cpp > CMakeFiles\Solo.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\main.cpp > CMakeFiles\Solo.dir\main.cpp.i
 
 CMakeFiles/Solo.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Solo.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\main.cpp -o CMakeFiles\Solo.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\main.cpp -o CMakeFiles\Solo.dir\main.cpp.s
 
 CMakeFiles/Solo.dir/main.cpp.obj.requires:
 
@@ -80,123 +80,19 @@ CMakeFiles/Solo.dir/main.cpp.obj.provides: CMakeFiles/Solo.dir/main.cpp.obj.requ
 CMakeFiles/Solo.dir/main.cpp.obj.provides.build: CMakeFiles/Solo.dir/main.cpp.obj
 
 
-CMakeFiles/Solo.dir/Network/Channel.cpp.obj: CMakeFiles/Solo.dir/flags.make
-CMakeFiles/Solo.dir/Network/Channel.cpp.obj: ../Network/Channel.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Solo.dir/Network/Channel.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\Network\Channel.cpp.obj -c E:\Solo\Network\Channel.cpp
-
-CMakeFiles/Solo.dir/Network/Channel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Solo.dir/Network/Channel.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Network\Channel.cpp > CMakeFiles\Solo.dir\Network\Channel.cpp.i
-
-CMakeFiles/Solo.dir/Network/Channel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Solo.dir/Network/Channel.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Network\Channel.cpp -o CMakeFiles\Solo.dir\Network\Channel.cpp.s
-
-CMakeFiles/Solo.dir/Network/Channel.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Solo.dir/Network/Channel.cpp.obj.requires
-
-CMakeFiles/Solo.dir/Network/Channel.cpp.obj.provides: CMakeFiles/Solo.dir/Network/Channel.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Channel.cpp.obj.provides.build
-.PHONY : CMakeFiles/Solo.dir/Network/Channel.cpp.obj.provides
-
-CMakeFiles/Solo.dir/Network/Channel.cpp.obj.provides.build: CMakeFiles/Solo.dir/Network/Channel.cpp.obj
-
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj: CMakeFiles/Solo.dir/flags.make
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj: ../Network/Endpoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\Network\Endpoint.cpp.obj -c E:\Solo\Network\Endpoint.cpp
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Solo.dir/Network/Endpoint.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Network\Endpoint.cpp > CMakeFiles\Solo.dir\Network\Endpoint.cpp.i
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Solo.dir/Network/Endpoint.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Network\Endpoint.cpp -o CMakeFiles\Solo.dir\Network\Endpoint.cpp.s
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.requires
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.provides: CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.provides.build
-.PHONY : CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.provides
-
-CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.provides.build: CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj
-
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj: CMakeFiles/Solo.dir/flags.make
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj: ../Network/NetworkStream.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\Network\NetworkStream.cpp.obj -c E:\Solo\Network\NetworkStream.cpp
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Solo.dir/Network/NetworkStream.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Network\NetworkStream.cpp > CMakeFiles\Solo.dir\Network\NetworkStream.cpp.i
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Solo.dir/Network/NetworkStream.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Network\NetworkStream.cpp -o CMakeFiles\Solo.dir\Network\NetworkStream.cpp.s
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.requires
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.provides: CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.provides.build
-.PHONY : CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.provides
-
-CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.provides.build: CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj
-
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.obj: CMakeFiles/Solo.dir/flags.make
-CMakeFiles/Solo.dir/Network/Bundle.cpp.obj: ../Network/Bundle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Solo.dir/Network/Bundle.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Solo.dir\Network\Bundle.cpp.obj -c E:\Solo\Network\Bundle.cpp
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Solo.dir/Network/Bundle.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Network\Bundle.cpp > CMakeFiles\Solo.dir\Network\Bundle.cpp.i
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Solo.dir/Network/Bundle.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Network\Bundle.cpp -o CMakeFiles\Solo.dir\Network\Bundle.cpp.s
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.requires:
-
-.PHONY : CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.requires
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.provides: CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.requires
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.provides.build
-.PHONY : CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.provides
-
-CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.provides.build: CMakeFiles/Solo.dir/Network/Bundle.cpp.obj
-
-
 # Object files for target Solo
 Solo_OBJECTS = \
-"CMakeFiles/Solo.dir/main.cpp.obj" \
-"CMakeFiles/Solo.dir/Network/Channel.cpp.obj" \
-"CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj" \
-"CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj" \
-"CMakeFiles/Solo.dir/Network/Bundle.cpp.obj"
+"CMakeFiles/Solo.dir/main.cpp.obj"
 
 # External object files for target Solo
 Solo_EXTERNAL_OBJECTS =
 
 Solo.exe: CMakeFiles/Solo.dir/main.cpp.obj
-Solo.exe: CMakeFiles/Solo.dir/Network/Channel.cpp.obj
-Solo.exe: CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj
-Solo.exe: CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj
-Solo.exe: CMakeFiles/Solo.dir/Network/Bundle.cpp.obj
 Solo.exe: CMakeFiles/Solo.dir/build.make
 Solo.exe: CMakeFiles/Solo.dir/linklibs.rsp
 Solo.exe: CMakeFiles/Solo.dir/objects1.rsp
 Solo.exe: CMakeFiles/Solo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Solo.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Solo.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Solo.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -205,10 +101,6 @@ CMakeFiles/Solo.dir/build: Solo.exe
 .PHONY : CMakeFiles/Solo.dir/build
 
 CMakeFiles/Solo.dir/requires: CMakeFiles/Solo.dir/main.cpp.obj.requires
-CMakeFiles/Solo.dir/requires: CMakeFiles/Solo.dir/Network/Channel.cpp.obj.requires
-CMakeFiles/Solo.dir/requires: CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj.requires
-CMakeFiles/Solo.dir/requires: CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj.requires
-CMakeFiles/Solo.dir/requires: CMakeFiles/Solo.dir/Network/Bundle.cpp.obj.requires
 
 .PHONY : CMakeFiles/Solo.dir/requires
 
@@ -217,6 +109,6 @@ CMakeFiles/Solo.dir/clean:
 .PHONY : CMakeFiles/Solo.dir/clean
 
 CMakeFiles/Solo.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Solo E:\Solo E:\Solo\cmake-build-debug E:\Solo\cmake-build-debug E:\Solo\cmake-build-debug\CMakeFiles\Solo.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Solo\Solo E:\Solo\Solo E:\Solo\Solo\cmake-build-debug E:\Solo\Solo\cmake-build-debug E:\Solo\Solo\cmake-build-debug\CMakeFiles\Solo.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Solo.dir/depend
 

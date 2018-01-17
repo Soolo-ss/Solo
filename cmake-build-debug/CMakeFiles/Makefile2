@@ -53,10 +53,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Solo
+CMAKE_SOURCE_DIR = E:\Solo\Solo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Solo\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Solo\Solo\cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/Solo.dir
@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = E:\Solo\cmake-build-debug
 CMakeFiles/Solo.dir/all:
 	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/depend
 	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Solo\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Solo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target Solo"
 .PHONY : CMakeFiles/Solo.dir/all
 
 # Include target in all.
@@ -75,9 +75,9 @@ all: CMakeFiles/Solo.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Solo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\cmake-build-debug\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Solo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/Solo.dir/rule
 
 # Convenience name for target.
@@ -94,6 +94,79 @@ CMakeFiles/Solo.dir/clean:
 clean: CMakeFiles/Solo.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Network
+
+# Convenience name for "all" pass in the directory.
+Network/all: Network/CMakeFiles/NetworkLib.dir/all
+
+.PHONY : Network/all
+
+# Convenience name for "clean" pass in the directory.
+Network/clean: Network/CMakeFiles/NetworkLib.dir/clean
+
+.PHONY : Network/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Network/preinstall:
+
+.PHONY : Network/preinstall
+
+#=============================================================================
+# Target rules for target Network/CMakeFiles/NetworkLib.dir
+
+# All Build rule for target.
+Network/CMakeFiles/NetworkLib.dir/all:
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/depend
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target NetworkLib"
+.PHONY : Network/CMakeFiles/NetworkLib.dir/all
+
+# Include target in all.
+all: Network/CMakeFiles/NetworkLib.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+Network/CMakeFiles/NetworkLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 Network/CMakeFiles/NetworkLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles 0
+.PHONY : Network/CMakeFiles/NetworkLib.dir/rule
+
+# Convenience name for target.
+NetworkLib: Network/CMakeFiles/NetworkLib.dir/rule
+
+.PHONY : NetworkLib
+
+# clean rule for target.
+Network/CMakeFiles/NetworkLib.dir/clean:
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/clean
+.PHONY : Network/CMakeFiles/NetworkLib.dir/clean
+
+# clean rule for target.
+clean: Network/CMakeFiles/NetworkLib.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Common
+
+# Convenience name for "all" pass in the directory.
+Common/all:
+
+.PHONY : Common/all
+
+# Convenience name for "clean" pass in the directory.
+Common/clean:
+
+.PHONY : Common/clean
+
+# Convenience name for "preinstall" pass in the directory.
+Common/preinstall:
+
+.PHONY : Common/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

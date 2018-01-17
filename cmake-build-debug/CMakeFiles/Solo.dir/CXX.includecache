@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Solo/Solo/Common/ObjectPool.h
+list
+-
+mutex
+-
+memory
+-
+
+E:/Solo/Solo/main.cpp
+iostream
+-
+Common/ObjectPool.h
+E:/Solo/Solo/Common/ObjectPool.h
+

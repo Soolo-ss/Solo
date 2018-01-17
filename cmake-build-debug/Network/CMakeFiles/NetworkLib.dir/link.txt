@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libNetworkLib.a  CMakeFiles/NetworkLib.dir/Bundle.cpp.obj
+C:\MinGW\bin\ranlib.exe libNetworkLib.a

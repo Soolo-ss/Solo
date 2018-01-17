@@ -22,7 +22,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Compiler/GNU.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-GNU-C.cmake"
-  "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-GNU-CXX.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-GNU.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/Windows-windres.cmake"
@@ -30,6 +29,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/JetBrains/CLion 2017.2.1/bin/cmake/share/cmake-3.8/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
+  "../Common/CMakeLists.txt"
+  "../Network/CMakeLists.txt"
   "CMakeFiles/3.8.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.8.2/CMakeRCCompiler.cmake"
@@ -45,9 +46,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Network/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Common/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Solo.dir/DependInfo.cmake"
+  "Network/CMakeFiles/NetworkLib.dir/DependInfo.cmake"
   )

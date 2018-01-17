@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2017.2.1\bin\cmake\bin\cmake.exe" -E remo
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Solo
+CMAKE_SOURCE_DIR = E:\Solo\Solo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Solo\cmake-build-debug
+CMAKE_BINARY_DIR = E:\Solo\Solo\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\cmake-build-debug\CMakeFiles E:\Solo\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles E:\Solo\Solo\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\Solo\Solo\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,113 +122,18 @@ Solo/fast:
 	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/build
 .PHONY : Solo/fast
 
-Network/Bundle.obj: Network/Bundle.cpp.obj
+#=============================================================================
+# Target rules for targets named NetworkLib
 
-.PHONY : Network/Bundle.obj
+# Build rule for target.
+NetworkLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 NetworkLib
+.PHONY : NetworkLib
 
-# target to build an object file
-Network/Bundle.cpp.obj:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Bundle.cpp.obj
-.PHONY : Network/Bundle.cpp.obj
-
-Network/Bundle.i: Network/Bundle.cpp.i
-
-.PHONY : Network/Bundle.i
-
-# target to preprocess a source file
-Network/Bundle.cpp.i:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Bundle.cpp.i
-.PHONY : Network/Bundle.cpp.i
-
-Network/Bundle.s: Network/Bundle.cpp.s
-
-.PHONY : Network/Bundle.s
-
-# target to generate assembly for a file
-Network/Bundle.cpp.s:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Bundle.cpp.s
-.PHONY : Network/Bundle.cpp.s
-
-Network/Channel.obj: Network/Channel.cpp.obj
-
-.PHONY : Network/Channel.obj
-
-# target to build an object file
-Network/Channel.cpp.obj:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Channel.cpp.obj
-.PHONY : Network/Channel.cpp.obj
-
-Network/Channel.i: Network/Channel.cpp.i
-
-.PHONY : Network/Channel.i
-
-# target to preprocess a source file
-Network/Channel.cpp.i:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Channel.cpp.i
-.PHONY : Network/Channel.cpp.i
-
-Network/Channel.s: Network/Channel.cpp.s
-
-.PHONY : Network/Channel.s
-
-# target to generate assembly for a file
-Network/Channel.cpp.s:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Channel.cpp.s
-.PHONY : Network/Channel.cpp.s
-
-Network/Endpoint.obj: Network/Endpoint.cpp.obj
-
-.PHONY : Network/Endpoint.obj
-
-# target to build an object file
-Network/Endpoint.cpp.obj:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Endpoint.cpp.obj
-.PHONY : Network/Endpoint.cpp.obj
-
-Network/Endpoint.i: Network/Endpoint.cpp.i
-
-.PHONY : Network/Endpoint.i
-
-# target to preprocess a source file
-Network/Endpoint.cpp.i:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Endpoint.cpp.i
-.PHONY : Network/Endpoint.cpp.i
-
-Network/Endpoint.s: Network/Endpoint.cpp.s
-
-.PHONY : Network/Endpoint.s
-
-# target to generate assembly for a file
-Network/Endpoint.cpp.s:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/Endpoint.cpp.s
-.PHONY : Network/Endpoint.cpp.s
-
-Network/NetworkStream.obj: Network/NetworkStream.cpp.obj
-
-.PHONY : Network/NetworkStream.obj
-
-# target to build an object file
-Network/NetworkStream.cpp.obj:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/NetworkStream.cpp.obj
-.PHONY : Network/NetworkStream.cpp.obj
-
-Network/NetworkStream.i: Network/NetworkStream.cpp.i
-
-.PHONY : Network/NetworkStream.i
-
-# target to preprocess a source file
-Network/NetworkStream.cpp.i:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/NetworkStream.cpp.i
-.PHONY : Network/NetworkStream.cpp.i
-
-Network/NetworkStream.s: Network/NetworkStream.cpp.s
-
-.PHONY : Network/NetworkStream.s
-
-# target to generate assembly for a file
-Network/NetworkStream.cpp.s:
-	$(MAKE) -f CMakeFiles\Solo.dir\build.make CMakeFiles/Solo.dir/Network/NetworkStream.cpp.s
-.PHONY : Network/NetworkStream.cpp.s
+# fast build rule for target.
+NetworkLib/fast:
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/build
+.PHONY : NetworkLib/fast
 
 main.obj: main.cpp.obj
 
@@ -266,18 +171,7 @@ help:
 	@echo ... Solo
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Network/Bundle.obj
-	@echo ... Network/Bundle.i
-	@echo ... Network/Bundle.s
-	@echo ... Network/Channel.obj
-	@echo ... Network/Channel.i
-	@echo ... Network/Channel.s
-	@echo ... Network/Endpoint.obj
-	@echo ... Network/Endpoint.i
-	@echo ... Network/Endpoint.s
-	@echo ... Network/NetworkStream.obj
-	@echo ... Network/NetworkStream.i
-	@echo ... Network/NetworkStream.s
+	@echo ... NetworkLib
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
