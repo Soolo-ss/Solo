@@ -5,7 +5,7 @@
 #ifndef SOLO_SINGLETON_H
 #define SOLO_SINGLETON_H
 
-namespace Solo {
+namespace solo {
     template <typename T>
     class Singleton
     {

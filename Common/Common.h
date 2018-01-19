@@ -17,4 +17,10 @@
 
 #include <iostream>
 
+#include "Singleton.h"
+#include "Datetime.h"
+
+
+#define datetimeMgr solo::Singleton<solo::Datetime>::getInstance()
+
 #endif //SOLO_COMMON_H

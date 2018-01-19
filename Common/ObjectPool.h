@@ -6,7 +6,6 @@
 #define SOLO_OBJECTPOOL_H
 
 #include <list>
-#include <mutex>
 #include <memory>
 
 const int OBJECT_POOL_INIT_OBJ_SIZE = 16;
@@ -30,17 +29,13 @@ namespace solo {
         //返回一个对象，如果对象池为空，那么创建一个新的对象
         std::unique_ptr<T> createObject()
         {
-            mutex_.lock();
-
             while (true)
             {
                 if (objs_.size() > 0)
                 {
-                    std::unique_ptr<T> t = objs_.begin();
+                    std::unique_ptr<T> t = std::move(*objs_.begin());
 
                     objs_.pop_front();
-
-                    mutex_.unlock();
 
                     return t;
                 }
@@ -61,7 +56,7 @@ namespace solo {
             }
             else
             {
-                objs_.push_back(t);
+                objs_.push_back(std::move(t));
             }
         }
 
@@ -70,15 +65,13 @@ namespace solo {
         {
             for (int i = 0; i < objSize; ++i)
             {
-                objs_.push_back(std::make_unique<T>());
+                objs_.push_back(std::unique_ptr<T>(new T()));
             }
         }
 
 
     private:
         ObjectList objs_;
-
-        std::mutex mutex_;
     };
 }
 
