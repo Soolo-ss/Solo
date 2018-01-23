@@ -1,10 +1,10 @@
 #include <iostream>
 #include <memory>
 
-#include "Common/Common.h"
+#include "Network/Bundle.h"
 
 int main() {
-
+    solo::Bundle bundle;
 
     return 0;
 }

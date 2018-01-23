@@ -19,6 +19,7 @@
 
 #include "Singleton.h"
 #include "Datetime.h"
+#include "ObjectPool.h"
 
 
 #define datetimeMgr solo::Singleton<solo::Datetime>::getInstance()

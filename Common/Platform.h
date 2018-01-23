@@ -27,5 +27,30 @@
 
 #endif
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+using int64 = signed __int64;
+using int32 = signed __int32;
+using int16 = signed __int16;
+using int8 = signed __int8;
+
+using uint64 = unsigned __int64;
+using uint32 = unsigned __int32;
+using uint16 = unsigned __int16;
+using uint8 = unsigned __int8;
+
+using byte = unsigned char;
+
+#else
+using int64 = int64_t;
+using int32 = int32_t;
+using int16 = int16_t;
+using int8 = int8_t;
+using uint64 = uint64_t;
+using uint32 = uint32_t;
+using uint16 = uint16_t;
+using uint8 = uint8_t;
+
+#endif
+
 
 #endif //SOLO_PLATFORM_H

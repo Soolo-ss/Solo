@@ -3,3 +3,8 @@
 //
 
 #include "Bundle.h"
+
+namespace solo
+{
+
+}
