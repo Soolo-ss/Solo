@@ -14,6 +14,11 @@
 
 namespace solo
 {
+    Endpoint::Endpoint()
+    {
+
+    }
+
     Endpoint::Endpoint(std::string address, int port)
         : address_(address), port_(port)
     {
@@ -59,7 +64,7 @@ namespace solo
 
         int ret = ::accept(fd_, (sockaddr*)&sockAddr, &addrLen);
 
-#if SOLO_PLATFORM == SOLO_PLATFORM_WIN:
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (ret == INVALID_SOCKET)
             return nullptr;
 #else
@@ -76,6 +81,16 @@ namespace solo
         ep->setNonBlocking();
 
         return ep;
+    }
+
+    int Endpoint::setReuseAddr()
+    {
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+        bool reuse = true;
+#else
+        int reuse = 1;
+#endif
+        return ::setsockopt(fd_, SOL_SOCKET, SO_REUSEADDR, (char*)&reuse, sizeof(reuse));
     }
 
     int Endpoint::setNoDalay() {

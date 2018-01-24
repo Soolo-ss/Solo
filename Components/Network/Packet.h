@@ -7,7 +7,7 @@
 
 #include <array>
 
-#include "../Common/Common.h"
+#include "../../Common/Common.h"
 
 namespace solo
 {

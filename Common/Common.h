@@ -21,7 +21,6 @@
 #include "Datetime.h"
 #include "ObjectPool.h"
 
-
 #define datetimeMgr solo::Singleton<solo::Datetime>::getInstance()
 
 #endif //SOLO_COMMON_H

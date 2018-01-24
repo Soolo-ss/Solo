@@ -3,7 +3,7 @@ project(Solo)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(Network)
+add_subdirectory(Components)
 add_subdirectory(Common)
 
 add_executable(Solo main.cpp)

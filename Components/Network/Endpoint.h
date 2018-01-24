@@ -5,13 +5,16 @@
 #ifndef SOLO_ENDPOINT_H
 #define SOLO_ENDPOINT_H
 
-#include "../Common/Common.h"
+#include <winsock2.h>
+#include "../../Common/Common.h"
+
 
 namespace solo
 {
     class Endpoint
     {
     public:
+        Endpoint();
         Endpoint(std::string address, int port);
 
         int socket();
@@ -26,6 +29,7 @@ namespace solo
         void setAddress(const char* address);
         void setPort(int port);
 
+        int setReuseAddr();
         int setNoDalay();
         int setNonBlocking();
 
