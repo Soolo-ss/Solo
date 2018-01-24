@@ -16,13 +16,17 @@ namespace solo
         using EventCallback = std::function<void(int)>;
         using EventMap = std::unordered_map<int, EventCallback >;
 
+        Poller() {}
+
+        virtual ~Poller() {}
+
         virtual void poll() = 0;
 
-        virtual bool registeReadEvent(int fd, EventCallback readCallback);
-        virtual bool registeWriteEvent(int fd, EventCallback writeCallback);
+        virtual bool registeReadEvent(int fd, EventCallback readCallback) = 0;
+        virtual bool registeWriteEvent(int fd, EventCallback writeCallback) = 0;
 
-        virtual bool unregisteReadEvent(int fd);
-        virtual bool unregisteWriteEvent(int fd);
+        virtual bool unregisteReadEvent(int fd) = 0;
+        virtual bool unregisteWriteEvent(int fd) = 0;
 
     protected:
         EventMap fdReadEvents_;
