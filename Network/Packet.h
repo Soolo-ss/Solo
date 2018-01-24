@@ -32,11 +32,6 @@ namespace solo
 
 
     public:
-        size_t size()
-        {
-            return 0;
-        }
-
         size_t wpos()
         {
             return wpos_;
