@@ -12,24 +12,26 @@
 
 #ifdef _WIN32
 #define SOLO_PLATFORM SOLO_PLATFORM_WIN
-#error "win Platform"
 
 #elif __APPLE__
 #define SOLO_PLATFORM SOLO_PLATFORM_OSX
-#error "osx platform"
 
 #elif __linux__
 #define SOLO_PLATFORM SOLO_PLATFORM_LINUX
-#error "linux platform"
 
 #elif __unix__
 #define SOLO_PLATFORM SOLO_PLATFORM_UNIX
-#error "unix platform"
 
 #else
 #error "Unknown platform"
 
 #endif
+
+#define VALUE_TO_STRING(x) #x
+#define VALUE(x) VALUE_TO_STRING(x)
+#define VAR_NAME_VALUE(var) #var "="  VALUE(var)
+
+#pragma message(VAR_NAME_VALUE(SOLO_PLATFORM))
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 using int64 = signed __int64;
