@@ -5,12 +5,11 @@
 #ifndef SOLO_ENDPOINT_H
 #define SOLO_ENDPOINT_H
 
+#include "../../Common/Common.h"
+
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
 #endif
-
-#include "../../Common/Common.h"
-
 
 namespace solo
 {
