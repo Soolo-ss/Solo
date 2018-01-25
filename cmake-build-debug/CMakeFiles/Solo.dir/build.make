@@ -89,6 +89,7 @@ Solo_EXTERNAL_OBJECTS =
 
 Solo.exe: CMakeFiles/Solo.dir/main.cpp.obj
 Solo.exe: CMakeFiles/Solo.dir/build.make
+Solo.exe: Components/Network/libNetworkLib.a
 Solo.exe: CMakeFiles/Solo.dir/linklibs.rsp
 Solo.exe: CMakeFiles/Solo.dir/objects1.rsp
 Solo.exe: CMakeFiles/Solo.dir/link.txt

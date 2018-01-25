@@ -132,7 +132,7 @@ NetworkLib: cmake_check_build_system
 
 # fast build rule for target.
 NetworkLib/fast:
-	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/build
+	$(MAKE) -f Components\Network\CMakeFiles\NetworkLib.dir\build.make Components/Network/CMakeFiles/NetworkLib.dir/build
 .PHONY : NetworkLib/fast
 
 main.obj: main.cpp.obj

@@ -1,8 +1,10 @@
 E:/Solo/Solo/cmake-build-debug/CMakeFiles/Solo.dir
 E:/Solo/Solo/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/Solo/Solo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir
-E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/edit_cache.dir
-E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/rebuild_cache.dir
+E:/Solo/Solo/cmake-build-debug/Components/CMakeFiles/edit_cache.dir
+E:/Solo/Solo/cmake-build-debug/Components/CMakeFiles/rebuild_cache.dir
+E:/Solo/Solo/cmake-build-debug/Components/Network/CMakeFiles/NetworkLib.dir
+E:/Solo/Solo/cmake-build-debug/Components/Network/CMakeFiles/edit_cache.dir
+E:/Solo/Solo/cmake-build-debug/Components/Network/CMakeFiles/rebuild_cache.dir
 E:/Solo/Solo/cmake-build-debug/Common/CMakeFiles/edit_cache.dir
 E:/Solo/Solo/cmake-build-debug/Common/CMakeFiles/rebuild_cache.dir

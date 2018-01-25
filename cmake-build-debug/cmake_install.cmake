@@ -29,7 +29,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("E:/Solo/Solo/cmake-build-debug/Network/cmake_install.cmake")
+  include("E:/Solo/Solo/cmake-build-debug/Components/cmake_install.cmake")
   include("E:/Solo/Solo/cmake-build-debug/Common/cmake_install.cmake")
 
 endif()

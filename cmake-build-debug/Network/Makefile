@@ -151,6 +151,168 @@ Bundle.cpp.s:
 	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.s
 .PHONY : Bundle.cpp.s
 
+Endpoint.obj: Endpoint.cpp.obj
+
+.PHONY : Endpoint.obj
+
+# target to build an object file
+Endpoint.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj
+.PHONY : Endpoint.cpp.obj
+
+Endpoint.i: Endpoint.cpp.i
+
+.PHONY : Endpoint.i
+
+# target to preprocess a source file
+Endpoint.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.i
+.PHONY : Endpoint.cpp.i
+
+Endpoint.s: Endpoint.cpp.s
+
+.PHONY : Endpoint.s
+
+# target to generate assembly for a file
+Endpoint.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.s
+.PHONY : Endpoint.cpp.s
+
+Listener.obj: Listener.cpp.obj
+
+.PHONY : Listener.obj
+
+# target to build an object file
+Listener.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj
+.PHONY : Listener.cpp.obj
+
+Listener.i: Listener.cpp.i
+
+.PHONY : Listener.i
+
+# target to preprocess a source file
+Listener.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Listener.cpp.i
+.PHONY : Listener.cpp.i
+
+Listener.s: Listener.cpp.s
+
+.PHONY : Listener.s
+
+# target to generate assembly for a file
+Listener.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Listener.cpp.s
+.PHONY : Listener.cpp.s
+
+NetworkComponent.obj: NetworkComponent.cpp.obj
+
+.PHONY : NetworkComponent.obj
+
+# target to build an object file
+NetworkComponent.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj
+.PHONY : NetworkComponent.cpp.obj
+
+NetworkComponent.i: NetworkComponent.cpp.i
+
+.PHONY : NetworkComponent.i
+
+# target to preprocess a source file
+NetworkComponent.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.i
+.PHONY : NetworkComponent.cpp.i
+
+NetworkComponent.s: NetworkComponent.cpp.s
+
+.PHONY : NetworkComponent.s
+
+# target to generate assembly for a file
+NetworkComponent.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.s
+.PHONY : NetworkComponent.cpp.s
+
+Packet.obj: Packet.cpp.obj
+
+.PHONY : Packet.obj
+
+# target to build an object file
+Packet.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj
+.PHONY : Packet.cpp.obj
+
+Packet.i: Packet.cpp.i
+
+.PHONY : Packet.i
+
+# target to preprocess a source file
+Packet.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Packet.cpp.i
+.PHONY : Packet.cpp.i
+
+Packet.s: Packet.cpp.s
+
+.PHONY : Packet.s
+
+# target to generate assembly for a file
+Packet.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Packet.cpp.s
+.PHONY : Packet.cpp.s
+
+Poller.obj: Poller.cpp.obj
+
+.PHONY : Poller.obj
+
+# target to build an object file
+Poller.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj
+.PHONY : Poller.cpp.obj
+
+Poller.i: Poller.cpp.i
+
+.PHONY : Poller.i
+
+# target to preprocess a source file
+Poller.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Poller.cpp.i
+.PHONY : Poller.cpp.i
+
+Poller.s: Poller.cpp.s
+
+.PHONY : Poller.s
+
+# target to generate assembly for a file
+Poller.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Poller.cpp.s
+.PHONY : Poller.cpp.s
+
+SelectPoller.obj: SelectPoller.cpp.obj
+
+.PHONY : SelectPoller.obj
+
+# target to build an object file
+SelectPoller.cpp.obj:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj
+.PHONY : SelectPoller.cpp.obj
+
+SelectPoller.i: SelectPoller.cpp.i
+
+.PHONY : SelectPoller.i
+
+# target to preprocess a source file
+SelectPoller.cpp.i:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.i
+.PHONY : SelectPoller.cpp.i
+
+SelectPoller.s: SelectPoller.cpp.s
+
+.PHONY : SelectPoller.s
+
+# target to generate assembly for a file
+SelectPoller.cpp.s:
+	cd /d E:\Solo\Solo\cmake-build-debug && $(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.s
+.PHONY : SelectPoller.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -163,6 +325,24 @@ help:
 	@echo ... Bundle.obj
 	@echo ... Bundle.i
 	@echo ... Bundle.s
+	@echo ... Endpoint.obj
+	@echo ... Endpoint.i
+	@echo ... Endpoint.s
+	@echo ... Listener.obj
+	@echo ... Listener.i
+	@echo ... Listener.s
+	@echo ... NetworkComponent.obj
+	@echo ... NetworkComponent.i
+	@echo ... NetworkComponent.s
+	@echo ... Packet.obj
+	@echo ... Packet.i
+	@echo ... Packet.s
+	@echo ... Poller.obj
+	@echo ... Poller.i
+	@echo ... Poller.s
+	@echo ... SelectPoller.obj
+	@echo ... SelectPoller.i
+	@echo ... SelectPoller.s
 .PHONY : help
 
 

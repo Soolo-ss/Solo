@@ -5,6 +5,9 @@
 #ifndef SOLO_ENDPOINT_H
 #define SOLO_ENDPOINT_H
 
+
+#pragma message (SOLO_PLATFORM)
+
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
 #endif

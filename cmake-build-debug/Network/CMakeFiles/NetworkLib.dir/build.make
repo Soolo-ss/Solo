@@ -80,17 +80,173 @@ Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj.provides: Network/CMakeFiles/Ne
 Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj
 
 
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj: ../Network/Packet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\Packet.cpp.obj -c E:\Solo\Solo\Network\Packet.cpp
+
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/Packet.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\Packet.cpp > CMakeFiles\NetworkLib.dir\Packet.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/Packet.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\Packet.cpp -o CMakeFiles\NetworkLib.dir\Packet.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj
+
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj: ../Network/Poller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\Poller.cpp.obj -c E:\Solo\Solo\Network\Poller.cpp
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/Poller.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\Poller.cpp > CMakeFiles\NetworkLib.dir\Poller.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/Poller.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\Poller.cpp -o CMakeFiles\NetworkLib.dir\Poller.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj
+
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj: ../Network/Endpoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\Endpoint.cpp.obj -c E:\Solo\Solo\Network\Endpoint.cpp
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/Endpoint.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\Endpoint.cpp > CMakeFiles\NetworkLib.dir\Endpoint.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/Endpoint.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\Endpoint.cpp -o CMakeFiles\NetworkLib.dir\Endpoint.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj
+
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj: ../Network/SelectPoller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\SelectPoller.cpp.obj -c E:\Solo\Solo\Network\SelectPoller.cpp
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/SelectPoller.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\SelectPoller.cpp > CMakeFiles\NetworkLib.dir\SelectPoller.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/SelectPoller.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\SelectPoller.cpp -o CMakeFiles\NetworkLib.dir\SelectPoller.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj
+
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj: ../Network/Listener.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\Listener.cpp.obj -c E:\Solo\Solo\Network\Listener.cpp
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/Listener.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\Listener.cpp > CMakeFiles\NetworkLib.dir\Listener.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/Listener.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\Listener.cpp -o CMakeFiles\NetworkLib.dir\Listener.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj
+
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj: Network/CMakeFiles/NetworkLib.dir/flags.make
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj: ../Network/NetworkComponent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\NetworkLib.dir\NetworkComponent.cpp.obj -c E:\Solo\Solo\Network\NetworkComponent.cpp
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.i"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Solo\Solo\Network\NetworkComponent.cpp > CMakeFiles\NetworkLib.dir\NetworkComponent.cpp.i
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.s"
+	cd /d E:\Solo\Solo\cmake-build-debug\Network && C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Solo\Solo\Network\NetworkComponent.cpp -o CMakeFiles\NetworkLib.dir\NetworkComponent.cpp.s
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.requires:
+
+.PHONY : Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.requires
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.provides: Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.requires
+	$(MAKE) -f Network\CMakeFiles\NetworkLib.dir\build.make Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.provides.build
+.PHONY : Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.provides
+
+Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.provides.build: Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj
+
+
 # Object files for target NetworkLib
 NetworkLib_OBJECTS = \
-"CMakeFiles/NetworkLib.dir/Bundle.cpp.obj"
+"CMakeFiles/NetworkLib.dir/Bundle.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/Packet.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/Poller.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/Listener.cpp.obj" \
+"CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj"
 
 # External object files for target NetworkLib
 NetworkLib_EXTERNAL_OBJECTS =
 
 Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj
+Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj
 Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/build.make
 Network/libNetworkLib.a: Network/CMakeFiles/NetworkLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libNetworkLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Solo\Solo\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libNetworkLib.a"
 	cd /d E:\Solo\Solo\cmake-build-debug\Network && $(CMAKE_COMMAND) -P CMakeFiles\NetworkLib.dir\cmake_clean_target.cmake
 	cd /d E:\Solo\Solo\cmake-build-debug\Network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\NetworkLib.dir\link.txt --verbose=$(VERBOSE)
 
@@ -100,6 +256,12 @@ Network/CMakeFiles/NetworkLib.dir/build: Network/libNetworkLib.a
 .PHONY : Network/CMakeFiles/NetworkLib.dir/build
 
 Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj.requires
+Network/CMakeFiles/NetworkLib.dir/requires: Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj.requires
 
 .PHONY : Network/CMakeFiles/NetworkLib.dir/requires
 

@@ -5,6 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "E:/Solo/Solo/Network/Bundle.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/Bundle.cpp.obj"
+  "E:/Solo/Solo/Network/Endpoint.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/Endpoint.cpp.obj"
+  "E:/Solo/Solo/Network/Listener.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/Listener.cpp.obj"
+  "E:/Solo/Solo/Network/NetworkComponent.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/NetworkComponent.cpp.obj"
+  "E:/Solo/Solo/Network/Packet.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/Packet.cpp.obj"
+  "E:/Solo/Solo/Network/Poller.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/Poller.cpp.obj"
+  "E:/Solo/Solo/Network/SelectPoller.cpp" "E:/Solo/Solo/cmake-build-debug/Network/CMakeFiles/NetworkLib.dir/SelectPoller.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
