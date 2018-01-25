@@ -16,9 +16,9 @@ namespace solo
         using EventCallback = std::function<void(int)>;
         using EventMap = std::unordered_map<int, EventCallback >;
 
-        Poller() {}
+        Poller() = default;
 
-        virtual ~Poller() {}
+        virtual ~Poller() = default;
 
         virtual void poll() = 0;
 

@@ -14,11 +14,6 @@ namespace solo
         FD_ZERO(&writeSet_);
     }
 
-    SelectPoller::~SelectPoller()
-    {
-
-    }
-
     void SelectPoller::poll()
     {
         fd_set readSet;
