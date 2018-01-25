@@ -23,7 +23,7 @@
 #define SOLO_PLATFORM SOLO_PLATFORM_UNIX
 
 #else
-#   error "Unknown platform"
+#error "Unknown platform"
 
 #endif
 
