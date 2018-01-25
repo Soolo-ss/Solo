@@ -2,15 +2,17 @@
 // Created by pc4 on 2018/1/23.
 //
 
+#include "Endpoint.h"
+
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
-#include <afxres.h>
-
 #else
-#include <socket>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <fcntl.h>>
+#include <netinet/tcp.h>
 #endif
-
-#include "Endpoint.h"
 
 namespace solo
 {
@@ -45,7 +47,11 @@ namespace solo
 
         memset(&localAddr, 0, sizeof(sockaddr_in));
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         localAddr.sin_addr.S_un.S_addr = inet_addr(address_.c_str());
+#else
+        localAddr.sin_addr.s_addr = inet_addr(address_.c_str());
+#endif
         localAddr.sin_family = AF_INET;
         localAddr.sin_port = port_;
 
@@ -62,7 +68,7 @@ namespace solo
         sockaddr_in  sockAddr;
         int addrLen = sizeof(sockaddr);
 
-        int ret = ::accept(fd_, (sockaddr*)&sockAddr, &addrLen);
+        int ret = ::accept(fd_, (sockaddr*)&sockAddr, (socklen_t*)&addrLen);
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (ret == INVALID_SOCKET)

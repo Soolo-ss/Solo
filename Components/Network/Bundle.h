@@ -62,6 +62,8 @@ namespace solo
                     break;
                 }
             }
+
+            return 0;
         }
 
 

@@ -19,10 +19,10 @@ namespace solo
 
         void start(Poller* poller);
 
+        void accpetHandler(int newFd);
+
     private:
         void registeToPoller(Poller* poller);
-
-        void accpetHandler(int newFd);
 
     private:
         int port_;

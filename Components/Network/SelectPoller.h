@@ -5,13 +5,15 @@
 #ifndef SOLO_SELECTPOLLER_H
 #define SOLO_SELECTPOLLER_H
 
+#include "Poller.h"
+
+#include "../../Common/Platform.h"
+
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
 #else
 #include <sys/select.h>
 #endif
-
-#include "Poller.h"
 
 namespace solo
 {

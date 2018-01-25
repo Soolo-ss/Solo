@@ -31,7 +31,7 @@ namespace solo
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         poller_ = new SelectPoller();
 #else
-
+        poller_ = new SelectPoller();
 #endif
 
         return true;

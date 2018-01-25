@@ -41,11 +41,13 @@ namespace solo
 
     bool SelectPoller::processEvents(fd_set& readSet, fd_set& writeSet)
     {
-        for (int i = 0; i != readSet.fd_count; ++i)
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+        for(const int32& fd : readSet.fd_array)
+#elif SOLO_PLATFORM == SOLO_PLATFORM_OSX
+        for(const int32& fd : readSet.fds_bits)
+#endif
         {
-            int readFd = readSet.fd_array[i];
-
-            EventMap::iterator iter = fdReadEvents_.find(readFd);
+            EventMap::iterator iter = fdReadEvents_.find(fd);
 
             if (iter == std::end(fdReadEvents_))
             {
@@ -53,16 +55,18 @@ namespace solo
             }
             else
             {
-                EventCallback readCallback = fdReadEvents_[readFd];
-                readCallback(readFd);
+                EventCallback readCallback = fdReadEvents_[fd];
+                readCallback(fd);
             }
         }
 
-        for (int i = 0; i != writeSet.fd_count; ++i)
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+        for(const int32& fd : writeSet.fd_array)
+#elif SOLO_PLATFORM == SOLO_PLATFORM_OSX
+        for(const int32& fd : writeSet.fds_bits)
+#endif
         {
-            int writeFd = writeSet.fd_array[i];
-
-            EventMap::iterator iter = fdWriteEvents_.find(writeFd);
+            EventMap::iterator iter = fdWriteEvents_.find(fd);
 
             if (iter == std::end(fdWriteEvents_))
             {
@@ -70,8 +74,8 @@ namespace solo
             }
             else
             {
-                EventCallback writeCallback = fdWriteEvents_[writeFd];
-                writeCallback(writeFd);
+                EventCallback writeCallback = fdWriteEvents_[fd];
+                writeCallback(fd);
             }
         }
     }

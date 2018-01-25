@@ -40,7 +40,7 @@ namespace solo
 
     void Listener::registeToPoller(Poller* poller)
     {
-        poller->registeReadEvent(ep_.fd(), std::bind(&accpetHandler, this, std::placeholders::_1));
+        poller->registeReadEvent(ep_.fd(), std::bind(&Listener::accpetHandler, this, std::placeholders::_1));
     }
 
     void Listener::accpetHandler(int newFd)
