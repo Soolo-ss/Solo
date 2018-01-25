@@ -12,15 +12,19 @@
 
 #ifdef _WIN32
 #define SOLO_PLATFORM SOLO_PLATFORM_WIN
+#error "win Platform"
 
 #elif __APPLE__
 #define SOLO_PLATFORM SOLO_PLATFORM_OSX
+#error "osx platform"
 
 #elif __linux__
 #define SOLO_PLATFORM SOLO_PLATFORM_LINUX
+#error "linux platform"
 
 #elif __unix__
 #define SOLO_PLATFORM SOLO_PLATFORM_UNIX
+#error "unix platform"
 
 #else
 #error "Unknown platform"
