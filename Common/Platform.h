@@ -27,12 +27,6 @@
 
 #endif
 
-#define VALUE_TO_STRING(x) #x
-#define VALUE(x) VALUE_TO_STRING(x)
-#define VAR_NAME_VALUE(var) #var "="  VALUE(var)
-
-#pragma message(VAR_NAME_VALUE(SOLO_PLATFORM))
-
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 using int64 = signed __int64;
 using int32 = signed __int32;
