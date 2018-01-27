@@ -4,7 +4,9 @@
 
 #include "Packet.h"
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
+#endif
 
 namespace solo
 {
