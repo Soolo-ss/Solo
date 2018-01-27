@@ -18,7 +18,7 @@
     <list default="true" id="086acbc2-bec5-46a9-a159-46a63fd7b06a" name="Default" comment="5">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Packet.cpp" afterPath="$PROJECT_DIR$/Components/Network/Packet.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Endpoint.cpp" afterPath="$PROJECT_DIR$/Components/Network/Endpoint.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/CXX.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.internal" />
@@ -45,16 +45,6 @@
               <folding>
                 <element signature="e#39#60#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -101,17 +91,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Endpoint.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#129#244#0" expanded="true" />
+                <element signature="e#1548#1588#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Endpoint.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="198">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Packet.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Packet.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/Network/Packet.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -208,7 +211,6 @@
         <option value="$PROJECT_DIR$/Components/Network/Listener.h" />
         <option value="$PROJECT_DIR$/Components/Network/NetworkComponent.h" />
         <option value="$PROJECT_DIR$/Components/Network/NetworkComponent.cpp" />
-        <option value="$PROJECT_DIR$/Components/Network/Endpoint.cpp" />
         <option value="$PROJECT_DIR$/Components/Network/Endpoint.h" />
         <option value="$PROJECT_DIR$/Components/Network/Packet.h" />
         <option value="$PROJECT_DIR$/Components/Network/Channel.h" />
@@ -220,6 +222,7 @@
         <option value="$PROJECT_DIR$/Common/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Components/Network/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Components/Network/Packet.cpp" />
+        <option value="$PROJECT_DIR$/Components/Network/Endpoint.cpp" />
       </list>
     </option>
   </component>
@@ -363,7 +366,7 @@
       <workItem from="1516784212852" duration="9384000" />
       <workItem from="1516848251582" duration="16707000" />
       <workItem from="1516965506430" duration="68274000" />
-      <workItem from="1517036054904" duration="10865000" />
+      <workItem from="1517036054904" duration="10965000" />
     </task>
     <task id="LOCAL-00001" summary="5">
       <created>1516793320788</created>
@@ -463,11 +466,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517049102929</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="5">
+      <created>1517049144973</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1517049144973</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176916000" />
+    <option name="totallyTimeSpent" value="177016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -767,17 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="123" column="5" lean-forward="false" selection-start-line="123" selection-start-column="5" selection-end-line="123" selection-end-column="5" />
-          <folding>
-            <element signature="e#78#99#0" expanded="true" />
-            <element signature="e#1571#1611#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39">
@@ -810,14 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -866,14 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="41" column="12" lean-forward="false" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Components/Network/Packet.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -887,6 +870,33 @@
         <state relative-caret-position="162">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#129#244#0" expanded="true" />
+            <element signature="e#1548#1588#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,9 +1,9 @@
 //
 // Created by pc4 on 2018/1/23.
 //
+#include "Endpoint.h"
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
-#include <winsock2.h>
 #include <ws2tcpip.h>
 
 #else
@@ -13,8 +13,6 @@
 #include <fcntl.h>>
 #include <netinet/tcp.h>
 #endif
-
-#include "Endpoint.h"
 
 namespace solo
 {
