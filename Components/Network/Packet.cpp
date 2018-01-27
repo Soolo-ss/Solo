@@ -6,6 +6,8 @@
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
+#else
+#include <sys/socket.h>
 #endif
 
 namespace solo
