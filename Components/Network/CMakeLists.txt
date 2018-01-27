@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
+set(CMAKE_CXX_STANDARD 11)
+
 message("Create Network Lib")
 
 set(ImportFiles Bundle.cpp Bundle.h Packet.cpp Packet.h Poller.h Endpoint.h Endpoint.cpp Endpoint.h SelectPoller.cpp SelectPoller.h Listener.cpp Listener.h NetworkComponent.cpp NetworkComponent.h Poller.cpp Channel.cpp Channel.h)
