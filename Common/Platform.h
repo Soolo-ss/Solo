@@ -28,6 +28,9 @@
 #endif
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+
+#include <stdio.h>
+
 using int64 = signed __int64;
 using int32 = signed __int32;
 using int16 = signed __int16;

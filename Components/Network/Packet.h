@@ -30,6 +30,12 @@ namespace solo
             return copySize;
         }
 
+        int recv(int fd);
+
+        const std::array<byte, solo::MAX_TCP_PACKET_SIZE>& buffer()
+        {
+            return buffer_;
+        };
 
     public:
         size_t wpos()

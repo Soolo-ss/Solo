@@ -22,7 +22,7 @@ namespace solo
     public:
         SelectPoller();
 
-        ~SelectPoller() = default;
+        ~SelectPoller() {};
 
         bool registeReadEvent(int fd, EventCallback readCallback) override;
         bool registeWriteEvent(int fd, EventCallback writeCallback) override;

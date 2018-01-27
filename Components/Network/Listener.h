@@ -10,10 +10,12 @@
 
 namespace solo
 {
+    class NetworkComponent;
+
     class Listener
     {
     public:
-        Listener();
+        explicit Listener(NetworkComponent* network);
 
         void init(int port);
 
@@ -23,11 +25,11 @@ namespace solo
 
     private:
         void registeToPoller(Poller* poller);
-
     private:
         int port_;
-
         Endpoint ep_;
+
+        NetworkComponent* network_;
     };
 }
 

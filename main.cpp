@@ -14,7 +14,8 @@ int main() {
 
     netComp.init(20015);
 
-    netComp.start();
+    while (true)
+        netComp.processNetwork();
 
     return 0;
 }

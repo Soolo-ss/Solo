@@ -14,5 +14,4 @@ if (WIN32)
     link_libraries(ws2_32.lib)
 endif()
 
-
 add_executable(Solo main.cpp)

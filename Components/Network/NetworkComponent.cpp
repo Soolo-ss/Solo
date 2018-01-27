@@ -7,9 +7,12 @@
 
 namespace solo
 {
+    int64 NetworkComponent::channelID = 0;
+
     NetworkComponent::NetworkComponent(ComponentManager* manager)
         : Component(manager),
-          poller_(nullptr)
+          poller_(nullptr),
+          listener_(this)
     {
 
     }
@@ -28,20 +31,41 @@ namespace solo
     {
         listener_.init(port);
 
-#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         poller_ = new SelectPoller();
-#else
-        poller_ = new SelectPoller();
-#endif
+        poller_->setRun(true);
+
+        listener_.start(poller_);
 
         return true;
     }
 
-    void NetworkComponent::start()
+    void NetworkComponent::processNetwork()
     {
         poller_->poll();
+    }
 
-        listener_.start(poller_);
+    void NetworkComponent::registeChannel(ChannelPtr channel)
+    {
+        ++channelID;
+        channels_.insert(std::make_pair(channelID, channel));
+    }
+
+    void NetworkComponent::unregisteChannel(int64 channelID)
+    {
+        if (channels_.find(channelID) != std::end(channels_))
+        {
+            channels_.erase(channelID);
+        }
+    }
+
+    void NetworkComponent::registeReadEndpointToPoller(Endpoint* endpoint, std::function<void(int)> readCallback)
+    {
+        poller_->registeReadEvent(endpoint->fd(), readCallback);
+    }
+
+    void NetworkComponent::registeWriteEndpointToPoller(Endpoint *endpoint, std::function<void(int)> writeCallback)
+    {
+        poller_->registeWriteEvent(endpoint->fd(), writeCallback);
     }
 
 }

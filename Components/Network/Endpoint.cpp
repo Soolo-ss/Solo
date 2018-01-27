@@ -2,10 +2,10 @@
 // Created by pc4 on 2018/1/23.
 //
 
-#include "Endpoint.h"
-
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
+#include <ws2tcpip.h>
+
 #else
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -13,6 +13,8 @@
 #include <fcntl.h>>
 #include <netinet/tcp.h>
 #endif
+
+#include "Endpoint.h"
 
 namespace solo
 {
@@ -28,15 +30,19 @@ namespace solo
 
     int Endpoint::socket()
     {
+        fd_ = ::socket(AF_INET, SOCK_STREAM, 0);
+
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (fd_ == INVALID_SOCKET && WSAGetLastError() == WSANOTINITIALISED)
         {
             WSADATA wsadata;
             WSAStartup(0x202, &wsadata);
+
+            fd_ = ::socket(AF_INET, SOCK_STREAM, 0);
         }
 #endif
 
-        fd_ = ::socket(AF_INET, SOCK_STREAM, 0);
+
 
         return fd_;
     }
@@ -47,13 +53,9 @@ namespace solo
 
         memset(&localAddr, 0, sizeof(sockaddr_in));
 
-#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         localAddr.sin_addr.S_un.S_addr = inet_addr(address_.c_str());
-#else
-        localAddr.sin_addr.s_addr = inet_addr(address_.c_str());
-#endif
         localAddr.sin_family = AF_INET;
-        localAddr.sin_port = port_;
+        localAddr.sin_port = htons(port_);
 
         return ::bind(fd_, (sockaddr*)&localAddr, sizeof(sockaddr));
     }
@@ -66,9 +68,9 @@ namespace solo
     std::unique_ptr<Endpoint> Endpoint::accept()
     {
         sockaddr_in  sockAddr;
-        int addrLen = sizeof(sockaddr);
+        socklen_t addrLen = sizeof(sockaddr);
 
-        int ret = ::accept(fd_, (sockaddr*)&sockAddr, (socklen_t*)&addrLen);
+        int ret = ::accept(fd_, (sockaddr*)&sockAddr, &addrLen);
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (ret == INVALID_SOCKET)
@@ -130,6 +132,5 @@ namespace solo
     {
         port_ = port;
     }
-
 
 }

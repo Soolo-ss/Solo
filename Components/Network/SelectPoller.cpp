@@ -4,6 +4,8 @@
 
 #include "SelectPoller.h"
 
+#include <iostream>
+
 namespace solo
 {
     SelectPoller::SelectPoller()
@@ -27,14 +29,22 @@ namespace solo
 
         timeval time;
         time.tv_sec = 0;
-        time.tv_usec = 0;
+        time.tv_usec = (int)(0.05 * 1000000.0);
 
         int readyCount = 0;
 
-        readyCount = select(0, &readSet, &writeSet, NULL, &time);
+        int maxFdSize = std::max(readSet.fd_count, writeSet.fd_count);
+
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
+        if (maxFdSize == 0)
+            Sleep((int)0.05 * 1000.0);
+#endif
+
+        readyCount = select(maxFdSize + 1, &readSet, &writeSet, NULL, &time);
 
         if (readyCount > 0)
         {
+            std::cout << readyCount << std::endl;
             processEvents(readSet, writeSet);
         }
     }
