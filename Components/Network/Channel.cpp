@@ -2,6 +2,7 @@
 // Created by pc4 on 2018/1/26.
 //
 
+#include "Packet.h"
 #include "Channel.h"
 #include "NetworkComponent.h"
 
@@ -14,7 +15,6 @@ namespace solo
     {
 
     }
-
 
     void Channel::setEndpoint(std::unique_ptr<Endpoint> ep)
     {
@@ -42,11 +42,16 @@ namespace solo
 
         int readSize = packet->recv(fd);
 
-        for (size_t i = packet->rpos(); i != packet->wpos(); ++i)
+    }
+
+    bool Channel::send(std::unique_ptr<Bundle> bundle)
+    {
+        //尝试直接发送
+        for (std::unique_ptr<Packet>& packet : bundle->packets())
         {
-            std::cout << packet->buffer()[i];
+            ep_->send(packet);
         }
 
-        std::cout << std::endl;
+
     }
 }

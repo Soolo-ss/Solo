@@ -14,6 +14,9 @@ namespace solo
     class Bundle
     {
     public:
+        using Packets = std::vector< std::unique_ptr<solo::Packet> >;
+
+    public:
         template<typename V>
         Bundle &operator<<(V v)
         {
@@ -25,6 +28,11 @@ namespace solo
         int32 size()
         {
             return packets_.size();
+        }
+
+        Packets& packets()
+        {
+            return packets_;
         }
 
     private:
@@ -90,7 +98,7 @@ namespace solo
 
     private:
         int32 nowPacket_ = 0;
-        std::vector<std::unique_ptr<solo::Packet> > packets_;
+        Packets packets_;
     };
 
 }
