@@ -39,12 +39,7 @@ namespace solo {
         //返回一个对象，如果对象池为空，那么创建一个新的对象
         ObjectPtr createObject()
         {
-            if (!std::is_base_of<PoolObject, T>::value)
-            {
-                assert(false);
-                return nullptr;
-            }
-
+            static_assert(std::is_base_of<PoolObject, T>::value, "not derived from PoolObject");
 
             while (true)
             {

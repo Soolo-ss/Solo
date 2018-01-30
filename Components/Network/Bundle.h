@@ -14,7 +14,7 @@ namespace solo
 {
     class Channel;
 
-    class Bundle
+    class Bundle : public PoolObject
     {
     public:
         using PacketPtr = unique_ptr<Packet>;
@@ -57,6 +57,11 @@ namespace solo
         bool send(Channel* channel);
 
         bool sendHead(Channel* channel);
+
+        void clear() override
+        {
+
+        }
 
     private:
         void CreatePacket()

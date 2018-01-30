@@ -14,7 +14,7 @@
 
 namespace solo
 {
-    class Endpoint
+    class Endpoint : public PoolObject
     {
     public:
         Endpoint();
@@ -43,6 +43,11 @@ namespace solo
         int fd()
         {
             return fd_;
+        }
+
+        void clear() override
+        {
+
         }
 
     private:

@@ -4,8 +4,10 @@
 #include "Components/Network/NetworkComponent.h"
 #include "Components/ComponentManager.h"
 
+using namespace solo;
+
 int main() {
-    /*
+
     std::shared_ptr<ComponentManager> manager = std::make_shared<ComponentManager>();
 
     NetworkComponent netComp(manager.get());
@@ -15,20 +17,23 @@ int main() {
 
     while (true)
         netComp.processNetwork();
-    */
-
-    ObjectPool<int>::getInstance().createObject();
 
 
+    /*
     {
-        std::cout << ObjectPool<int>::getInstance().size() << std::endl;
+        int beforesize = ObjectPool<solo::Bundle>::getInstance().size();
 
-        ObjectPool<int>::getInstance().createObject();
+        solo::unique_ptr <solo::Bundle> obj = ObjectPool<solo::Bundle>::getInstance().createObject();
 
-        std::cout << ObjectPool<int>::getInstance().size() << std::endl;
+        int afterSize = ObjectPool<solo::Bundle>::getInstance().size();
+
+        std::cout << "before size " << beforesize << std::endl;
+        std::cout << "after size" << afterSize << std::endl;
     }
 
-    std::cout << ObjectPool<int>::getInstance().size() << std::endl;
+    int finalySize = ObjectPool<solo::Bundle>::getInstance().size();
+
+     */
 
 
     return 0;

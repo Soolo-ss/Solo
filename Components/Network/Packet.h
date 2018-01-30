@@ -13,7 +13,7 @@ namespace solo
 {
     const size_t MAX_TCP_PACKET_SIZE = 1460;
 
-    class Packet
+    class Packet : public PoolObject
     {
     public:
         size_t appendBytes(std::vector<byte> bytes)
@@ -39,6 +39,11 @@ namespace solo
         {
             return buffer_;
         };
+
+        void clear() override
+        {
+
+        }
 
     public:
         size_t wpos()
