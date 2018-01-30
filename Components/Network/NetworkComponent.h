@@ -31,6 +31,8 @@ namespace solo
 
         void registeReadEndpointToPoller(Endpoint* endpoint, std::function<void(int)> readCallback);
         void registeWriteEndpointToPoller(Endpoint* endpoint, std::function<void(int)> writeCallback);
+        void unregisteReadEndpointToPoller(Endpoint* endpoint);
+        void unregisteWriteEndpointToPoller(Endpoint* endpoint);
 
     public:
         void registeChannel(ChannelPtr channel);

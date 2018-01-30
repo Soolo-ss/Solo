@@ -23,6 +23,18 @@ namespace solo
 
         return readSize;
     }
+
+    int Packet::send(int fd)
+    {
+        int sendSize = ::send(fd, (char*)buffer()[rpos()], readableSize(), 0);
+
+        if (sendSize == -1)
+            return 0;
+
+        rpos_ += sendSize;
+
+        return sendSize;
+    }
 }
 
 

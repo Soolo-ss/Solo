@@ -68,4 +68,14 @@ namespace solo
         poller_->registeWriteEvent(endpoint->fd(), writeCallback);
     }
 
+    void NetworkComponent::unregisteReadEndpointToPoller(Endpoint *endpoint)
+    {
+        poller_->unregisteReadEvent(endpoint->fd());
+    }
+
+    void NetworkComponent::unregisteWriteEndpointToPoller(Endpoint *endpoint)
+    {
+        poller_->unregisteWriteEvent(endpoint->fd());
+    }
+
 }

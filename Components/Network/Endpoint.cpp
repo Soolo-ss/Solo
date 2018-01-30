@@ -131,4 +131,11 @@ namespace solo
         port_ = port;
     }
 
+    int Endpoint::send(Packet &packet)
+    {
+        int send = packet.send(fd_);
+
+        return send;
+    }
+
 }

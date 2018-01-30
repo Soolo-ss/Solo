@@ -6,6 +6,7 @@
 #define SOLO_ENDPOINT_H
 
 #include "../../Common/Common.h"
+#include "Packet.h"
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
 #include <winsock2.h>
@@ -35,7 +36,7 @@ namespace solo
         int setNoDalay();
         int setNonBlocking();
 
-        int send();
+        int send(Packet& packet);
 
         int recv();
 

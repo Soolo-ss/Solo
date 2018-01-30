@@ -25,12 +25,15 @@ namespace solo
             else
                 copySize = bytes.size();
 
-            std::copy(std::begin(bytes), std::begin(bytes) + writeableSize(), std::begin(buffer_) + wpos());
+            std::copy(std::begin(bytes), std::begin(bytes) + copySize, std::begin(buffer_) + wpos_);
+
+            wpos_ += copySize;
 
             return copySize;
         }
 
         int recv(int fd);
+        int send(int fd);
 
         const std::array<byte, solo::MAX_TCP_PACKET_SIZE>& buffer()
         {

@@ -8,12 +8,16 @@
 #include <memory>
 #include "Packet.h"
 #include "../../Common/Common.h"
+#include <assert.h>
 
 namespace solo
 {
+    class Channel;
+
     class Bundle
     {
     public:
+        using PacketPtr = std::unique_ptr<Packet>;
         using Packets = std::vector< std::unique_ptr<solo::Packet> >;
 
     public:
@@ -30,10 +34,29 @@ namespace solo
             return packets_.size();
         }
 
+        int32 currentSendPos()
+        {
+            return currentSendPos_;
+        }
+
         Packets& packets()
         {
             return packets_;
         }
+
+        void setSendPos(int32 sendPos)
+        {
+            currentSendPos_ = sendPos;
+        }
+
+        void setSendChannel(Channel* channel)
+        {
+            currentSendChannel_ = channel;
+        }
+
+        bool send(Channel* channel);
+
+        bool sendHead(Channel* channel);
 
     private:
         void CreatePacket()
@@ -99,6 +122,10 @@ namespace solo
     private:
         int32 nowPacket_ = 0;
         Packets packets_;
+
+        int32 currentSendPos_ = 0;
+
+        Channel* currentSendChannel_ = nullptr;
     };
 
 }

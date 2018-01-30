@@ -6,6 +6,8 @@
 #include "Channel.h"
 #include "NetworkComponent.h"
 
+#include <assert.h>
+
 namespace solo
 {
 
@@ -15,6 +17,16 @@ namespace solo
     {
 
     }
+
+    Endpoint& Channel::ep()
+    {
+        return *ep_;
+    }
+
+    int64 Channel::channelID() const
+    {
+        return channelID_;
+    };
 
     void Channel::setEndpoint(std::unique_ptr<Endpoint> ep)
     {
@@ -31,6 +43,21 @@ namespace solo
         this->network_->registeReadEndpointToPoller(ep_.get(), std::bind(Channel::onRecvData, this, std::placeholders::_1));
     }
 
+    void Channel::registeWriteToPoller()
+    {
+        network_->registeWriteEndpointToPoller(ep_.get(), std::bind(Channel::onSendData, this, std::placeholders::_1));
+    }
+
+    void Channel::unregisteReadToPoller()
+    {
+        network_->unregisteReadEndpointToPoller(ep_.get());
+    }
+
+    void Channel::unregisteWriteToPoller()
+    {
+        network_->unregisteWriteEndpointToPoller(ep_.get());
+    }
+
     void Channel::onRecvData(int fd)
     {
         std::cout <<"on recv data" << std::endl;
@@ -44,14 +71,70 @@ namespace solo
 
     }
 
-    bool Channel::send(std::unique_ptr<Bundle> bundle)
+    void Channel::onSendData(int fd)
+    {
+        assert(fd == ep_->fd());
+
+        //成功发送完所有数据 取消Poller关注
+        if (sendAllBundles())
+        {
+            unregisteWriteToPoller();
+        }
+    }
+
+    bool Channel::send(BundlePtr bundle)
     {
         //尝试直接发送
-        for (std::unique_ptr<Packet>& packet : bundle->packets())
+        for (int i = bundle->currentSendPos(); i != bundle->packets().size(); ++i)
         {
-            ep_->send(packet);
+            auto sp = *(bundle->packets()[i]);
+
+            int sendSize = sp.readableSize();
+
+            int size = ep_->send(sp);
+
+            if (size != sendSize)
+            {
+                bundle->setSendPos(i);
+                break;
+            }
+            else
+            {
+                bundle->setSendPos(i + 1);
+            }
         }
 
+        //没有发送完
+        if (bundle->currentSendPos() != bundle->size())
+        {
+            pushSendBundle(std::move(bundle));
 
+            registeWriteToPoller();
+        }
+    }
+
+    void Channel::pushSendBundle(BundlePtr bundle)
+    {
+        bundle->setSendChannel(this);
+        sendBundles_.push_back(std::move(bundle));
+    }
+
+    bool Channel::sendAllBundles()
+    {
+        auto iter = std::begin(sendBundles_);
+
+        for ( ; iter != std::end(sendBundles_); )
+        {
+            if (!(*iter)->send(this))
+            {
+                break;
+            }
+            else
+            {
+                iter = sendBundles_.erase(iter);
+            }
+        }
+
+        return sendBundles_.size() == 0;
     }
 }
