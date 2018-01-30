@@ -15,7 +15,7 @@ namespace solo
     class Channel
     {
     public:
-        using BundlePtr = std::unique_ptr<Bundle>;
+        using BundlePtr = unique_ptr<Bundle>;
 
         Channel();
 
@@ -23,12 +23,13 @@ namespace solo
 
         int64 channelID() const;
 
-        void setEndpoint(std::unique_ptr<Endpoint> ep);
+        void setEndpoint(unique_ptr<Endpoint> ep);
         void setNetwork(NetworkComponent* network);
+        void setChannelID(int64 channelID);
 
     public:
-        bool send(std::unique_ptr<Bundle> bundle);
-        bool recv(std::unique_ptr<Bundle> bundle);
+        bool send(unique_ptr<Bundle> bundle);
+        bool recv(unique_ptr<Bundle> bundle);
 
         void registeReadToPoller();
         void registeWriteToPoller();
@@ -43,7 +44,7 @@ namespace solo
         bool sendAllBundles();
 
     private:
-        std::unique_ptr<Endpoint> ep_;
+        unique_ptr<Endpoint> ep_;
 
         NetworkComponent* network_;
 

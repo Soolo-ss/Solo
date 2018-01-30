@@ -26,7 +26,7 @@ namespace solo
 
     int Packet::send(int fd)
     {
-        int sendSize = ::send(fd, (char*)buffer()[rpos()], readableSize(), 0);
+        int sendSize = ::send(fd, (char*)&buffer()[rpos()], readableSize(), 0);
 
         if (sendSize == -1)
             return 0;

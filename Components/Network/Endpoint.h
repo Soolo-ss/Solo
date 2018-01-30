@@ -26,7 +26,7 @@ namespace solo
 
         int listen(int backlog = 5);
 
-        std::unique_ptr<Endpoint> accept();
+        unique_ptr<Endpoint> accept();
 
         void setFd(int fd);
         void setAddress(const char* address);

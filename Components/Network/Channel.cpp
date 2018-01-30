@@ -28,7 +28,7 @@ namespace solo
         return channelID_;
     };
 
-    void Channel::setEndpoint(std::unique_ptr<Endpoint> ep)
+    void Channel::setEndpoint(unique_ptr<Endpoint> ep)
     {
         ep_ = std::move(ep);
     }
@@ -36,6 +36,11 @@ namespace solo
     void Channel::setNetwork(NetworkComponent *network)
     {
         network_ = network;
+    }
+
+    void Channel::setChannelID(int64 channelID)
+    {
+        channelID_ = channelID;
     }
 
     void Channel::registeReadToPoller()
@@ -65,7 +70,7 @@ namespace solo
         if (fd != (ep_->fd()))
             return;
 
-        std::unique_ptr<Packet> packet = Singleton< ObjectPool<Packet> >::getInstance().createObject();
+        unique_ptr<Packet> packet = Singleton< ObjectPool<Packet> >::getInstance().createObject();
 
         int readSize = packet->recv(fd);
 

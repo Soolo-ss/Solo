@@ -20,7 +20,12 @@
 #include "Singleton.h"
 #include "Datetime.h"
 #include "ObjectPool.h"
+#include "unique_ptr.h"
 
 #define datetimeMgr solo::Singleton<solo::Datetime>::getInstance()
+
+template <typename T>
+using ObjectPool = solo::Singleton< solo::ObjectPool<T> >;
+
 
 #endif //SOLO_COMMON_H

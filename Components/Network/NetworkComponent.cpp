@@ -47,6 +47,8 @@ namespace solo
     void NetworkComponent::registeChannel(ChannelPtr channel)
     {
         ++channelID;
+
+        channel->setChannelID(channelID);
         channels_.insert(std::make_pair(channelID, channel));
     }
 

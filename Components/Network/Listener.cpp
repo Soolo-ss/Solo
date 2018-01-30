@@ -68,7 +68,7 @@ namespace solo
 
     void Listener::accpetHandler(int fd)
     {
-        std::unique_ptr<Endpoint> newEp = ep_.accept();
+        unique_ptr<Endpoint> newEp = ep_.accept();
 
         ChannelPtr newChannel = std::make_shared< Channel >();
         newChannel->setEndpoint(std::move(newEp));

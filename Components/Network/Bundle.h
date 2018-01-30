@@ -17,8 +17,8 @@ namespace solo
     class Bundle
     {
     public:
-        using PacketPtr = std::unique_ptr<Packet>;
-        using Packets = std::vector< std::unique_ptr<solo::Packet> >;
+        using PacketPtr = unique_ptr<Packet>;
+        using Packets = std::vector< PacketPtr >;
 
     public:
         template<typename V>
@@ -63,7 +63,7 @@ namespace solo
         {
             std::cout << "new" << std::endl;
 
-            std::unique_ptr<Packet> newPacket = Singleton< ObjectPool<Packet> >::getInstance().createObject();
+            auto newPacket = Singleton< ObjectPool<Packet> >::getInstance().createObject();
 
             packets_.push_back(std::move(newPacket));
         }

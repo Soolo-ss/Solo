@@ -63,7 +63,7 @@ namespace solo
         return ::listen(fd_, backlog);
     }
 
-    std::unique_ptr<Endpoint> Endpoint::accept()
+    unique_ptr<Endpoint> Endpoint::accept()
     {
         sockaddr_in  sockAddr;
         socklen_t addrLen = sizeof(sockaddr);
@@ -72,13 +72,13 @@ namespace solo
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (ret == INVALID_SOCKET)
-            return nullptr;
+            return unique_ptr<Endpoint>(nullptr);
 #else
         if (ret < 0)
             return nullptr;
 #endif
 
-        std::unique_ptr<Endpoint> ep = Singleton< ObjectPool<Endpoint> >::getInstance().createObject();
+        unique_ptr<Endpoint> ep = Singleton< ObjectPool<Endpoint> >::getInstance().createObject();
 
         ep->setFd(ret);
         ep->setAddress(inet_ntoa(sockAddr.sin_addr));

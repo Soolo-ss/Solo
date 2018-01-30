@@ -7,18 +7,28 @@
 
 #include <list>
 #include <memory>
+#include <assert.h>
 
 const int OBJECT_POOL_INIT_OBJ_SIZE = 16;
 const int OBJECT_POOL_MAX_OBJ_SIZE = 1024;
 
 namespace solo {
+
     template <typename T>
+    struct pool_deleter;
+
+    class PoolObject;
+
+    template <typename T, typename D = pool_deleter<T> >
     class ObjectPool
     {
     public:
-        using ObjectList = std::list< std::unique_ptr<T> >;
+        using ObjectPtr = std::unique_ptr<T, D>;
+
+        using ObjectList = std::list<ObjectPtr>;
 
         ObjectPool()
+            : objs_()
         {
             assignObjs();
         }
@@ -27,13 +37,20 @@ namespace solo {
         size_t size() const { objs_.size(); }
 
         //返回一个对象，如果对象池为空，那么创建一个新的对象
-        std::unique_ptr<T> createObject()
+        ObjectPtr createObject()
         {
+            if (!std::is_base_of<PoolObject, T>::value)
+            {
+                assert(false);
+                return nullptr;
+            }
+
+
             while (true)
             {
                 if (objs_.size() > 0)
                 {
-                    std::unique_ptr<T> t = std::move(*objs_.begin());
+                    ObjectPtr t = std::move(*objs_.begin());
 
                     objs_.pop_front();
 
@@ -48,7 +65,7 @@ namespace solo {
         }
 
         //回收一个对象
-        void reclaimObject(std::unique_ptr<T> t)
+        void reclaimObject(ObjectPtr t)
         {
             if (objs_.size() > OBJECT_POOL_MAX_OBJ_SIZE)
             {
@@ -65,13 +82,33 @@ namespace solo {
         {
             for (int i = 0; i < objSize; ++i)
             {
-                objs_.push_back(std::unique_ptr<T>(new T()));
+                objs_.push_back(ObjectPtr(new T()));
             }
         }
 
-
     private:
         ObjectList objs_;
+    };
+
+    class PoolObject
+    {
+    public:
+        PoolObject() { }
+
+        virtual ~PoolObject() { }
+
+        virtual void clear() = 0;
+    };
+
+    template<typename T>
+    struct pool_deleter
+    {
+        void operator()(T* tp)
+        {
+            static_assert(!std::is_void<T>::value, "can't delete incomplete type");
+
+            Singleton< ObjectPool<T> >::getInstance().reclaimObject(std::unique_ptr<T, pool_deleter<T> >(tp));
+        }
     };
 }
 
