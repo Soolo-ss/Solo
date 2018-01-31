@@ -45,12 +45,12 @@ namespace solo
 
     void Channel::registeReadToPoller()
     {
-        this->network_->registeReadEndpointToPoller(ep_.get(), std::bind(Channel::onRecvData, this, std::placeholders::_1));
+        this->network_->registeReadEndpointToPoller(ep_.get(), std::bind(&Channel::onRecvData, this, std::placeholders::_1));
     }
 
     void Channel::registeWriteToPoller()
     {
-        network_->registeWriteEndpointToPoller(ep_.get(), std::bind(Channel::onSendData, this, std::placeholders::_1));
+        network_->registeWriteEndpointToPoller(ep_.get(), std::bind(&Channel::onSendData, this, std::placeholders::_1));
     }
 
     void Channel::unregisteReadToPoller()

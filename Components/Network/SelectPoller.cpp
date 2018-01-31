@@ -33,7 +33,11 @@ namespace solo
 
         int readyCount = 0;
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         int maxFdSize = std::max(readSet.fd_count, writeSet.fd_count);
+#elif SOLO_PLATFORM == SOLO_PLATFORM_OSX
+        int maxFdSize = std::max(sizeof(readSet.fds_bits) / sizeof(*readSet.fds_bits), sizeof(writeSet.fds_bits) / sizeof(*writeSet.fds_bits) );
+#endif
 
 #if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         if (maxFdSize == 0)
@@ -44,6 +48,7 @@ namespace solo
 
         if (readyCount > 0)
         {
+            std::cout << readyCount << std::endl;
             processEvents(readSet, writeSet);
         }
     }

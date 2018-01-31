@@ -51,7 +51,11 @@ namespace solo
 
         memset(&localAddr, 0, sizeof(sockaddr_in));
 
+#if SOLO_PLATFORM == SOLO_PLATFORM_WIN
         localAddr.sin_addr.S_un.S_addr = inet_addr(address_.c_str());
+#elif SOLO_PLATFORM == SOLO_PLATFORM_OSX
+        localAddr.sin_addr.s_addr = inet_addr(address_.c_str());
+#endif
         localAddr.sin_family = AF_INET;
         localAddr.sin_port = htons(port_);
 
