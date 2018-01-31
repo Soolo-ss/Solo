@@ -14,10 +14,11 @@ namespace solo
 {
     int Packet::recv(int fd)
     {
+        LOG(DEBUG) << "Packet Writable" << writeableSize();
         int readSize = ::recv(fd, (char*)&buffer_[wpos_], writeableSize(), 0);
 
         if (readSize == -1)
-            return 0;
+            return -1;
 
         wpos_ += readSize;
 

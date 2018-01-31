@@ -45,6 +45,11 @@ namespace solo
 
         }
 
+        std::string str() const
+        {
+            return std::string(buffer_.begin() + rpos_, buffer_.begin() + wpos_);
+        }
+
     public:
         size_t wpos()
         {

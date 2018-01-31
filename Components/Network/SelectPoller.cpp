@@ -44,7 +44,6 @@ namespace solo
 
         if (readyCount > 0)
         {
-            std::cout << readyCount << std::endl;
             processEvents(readSet, writeSet);
         }
     }

@@ -65,8 +65,6 @@ namespace solo
 
     void Channel::onRecvData(int fd)
     {
-        std::cout <<"on recv data" << std::endl;
-
         if (fd != (ep_->fd()))
             return;
 
@@ -74,6 +72,20 @@ namespace solo
 
         int readSize = packet->recv(fd);
 
+        LOG(DEBUG) << "recvSize : " << readSize;
+        LOG(DEBUG) << "recvStr : " << packet->str();
+
+        if (readSize == 0)
+        {
+            LOG(WARNING) << "Client Reset Connection";
+
+            unregisteReadToPoller();
+            network_->unregisteChannel(channelID_);
+        }
+        else if (readSize == -1)
+        {
+            return;
+        }
     }
 
     void Channel::onSendData(int fd)

@@ -5,8 +5,9 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="Solo" targetName="NetworkLib" />
+      <config projectName="Solo" targetName="LogDLL" />
       <config projectName="Solo" targetName="Solo" />
+      <config projectName="Solo" targetName="NetworkLib" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -16,18 +17,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="086acbc2-bec5-46a9-a159-46a63fd7b06a" name="Default" comment="5">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Components/Log/CMakeLists.txt" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/ObjectPool.h" afterPath="$PROJECT_DIR$/Common/ObjectPool.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Common/Common.h" afterPath="$PROJECT_DIR$/Common/Common.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/CMakeLists.txt" afterPath="$PROJECT_DIR$/Components/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Bundle.h" afterPath="$PROJECT_DIR$/Components/Network/Bundle.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Endpoint.h" afterPath="$PROJECT_DIR$/Components/Network/Endpoint.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Channel.cpp" afterPath="$PROJECT_DIR$/Components/Network/Channel.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Listener.cpp" afterPath="$PROJECT_DIR$/Components/Network/Listener.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Packet.cpp" afterPath="$PROJECT_DIR$/Components/Network/Packet.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/Packet.h" afterPath="$PROJECT_DIR$/Components/Network/Packet.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Components/Network/SelectPoller.cpp" afterPath="$PROJECT_DIR$/Components/Network/SelectPoller.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/cmake_clean.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/objects1.rsp" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/objects1.rsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Solo.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Solo.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Solo.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
@@ -46,92 +62,41 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ObjectPool.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Common/ObjectPool.h">
+          <file leaf-file-name="Listener.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Components/Network/Listener.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
-                  <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-                  <folding>
-                    <element signature="e#264#276#0" expanded="true" />
-                    <element signature="e#339#382#0" expanded="true" />
-                    <element signature="e#1928#1940#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Channel.cpp" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Components/Network/Channel.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="321">
-                  <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+                <state relative-caret-position="270">
+                  <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="unique_ptr.h" pinned="false" current-in-tab="false">
-            <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h">
+          <file leaf-file-name="wingdi.h" pinned="false" current-in-tab="false">
+            <entry file="file://C:/MinGW/include/wingdi.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="805">
-                  <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1693#1707#0" expanded="true" />
-                    <element signature="e#2028#2122#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="-1298">
+                  <caret line="351" column="19" lean-forward="false" selection-start-line="351" selection-start-column="8" selection-end-line="351" selection-end-column="19" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Poller.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Components/Network/Poller.cpp">
+          <file leaf-file-name="easylogging++.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Log/easylogging++.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="597">
-                  <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+                <state relative-caret-position="314">
+                  <caret line="2763" column="46" lean-forward="false" selection-start-line="2763" selection-start-column="46" selection-end-line="2763" selection-end-column="46" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Components/Network/CMakeLists.txt">
+            <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="36">
-                  <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Packet.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Components/Network/Packet.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#84#100#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main.cpp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tuple" pinned="false" current-in-tab="false">
-            <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/tuple">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="211">
-                  <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
+                <state relative-caret-position="288">
+                  <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
                   <folding />
                 </state>
               </provider>
@@ -140,22 +105,63 @@
           <file leaf-file-name="Common.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Common/Common.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+                <state relative-caret-position="432">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Bundle.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="217">
+                  <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="easylogging++.cc" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Log/easylogging++.cc">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="162">
+                  <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="41" />
                   <folding>
-                    <element signature="e#84#105#0" expanded="true" />
-                    <element signature="e#419#431#0" expanded="true" />
+                    <element signature="e#465#489#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Singleton.h" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Common/Singleton.h">
+          <file leaf-file-name="Datetime.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Common/Datetime.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Log/CMakeLists.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="216">
-                  <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-                  <folding />
+                  <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -167,18 +173,102 @@
           <file leaf-file-name="Bundle.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+                <state relative-caret-position="450">
+                  <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Endpoint.h" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Channel.cpp" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Components/Network/Channel.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="309">
+                  <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SelectPoller.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="280">
+                  <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Packet.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/Packet.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="250">
+                  <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="unique_ptr.h" pinned="false" current-in-tab="false">
+            <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="229">
+                  <caret line="302" column="0" lean-forward="false" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Packet.h" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/Packet.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Endpoint.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="432">
                   <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SelectPoller.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="373">
+                  <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#39#64#0" expanded="true" />
+                    <element signature="e#1157#1196#0" expanded="true" />
+                    <element signature="e#1671#1711#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NetworkComponent.cpp" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Components/Network/NetworkComponent.cpp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="211">
+                  <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="functional" pinned="false" current-in-tab="false">
+            <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/functional">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="211">
+                  <caret line="603" column="0" lean-forward="false" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -197,12 +287,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>accept</find>
-      <find>bufferPtr</find>
-      <find>SOLO_PLATFORM</find>
-      <find>SOLO_PLATFORM_WINSOLO_PLATFORM_WIN</find>
-      <find>SOLO_PLATFORM_WIN</find>
-      <find>1113</find>
       <find>read</find>
       <find>recv</find>
       <find>sebd</find>
@@ -224,6 +308,15 @@
       <find>ObjectList</find>
       <find>objs_</find>
       <find>onrecv</find>
+      <find>processDispatch</find>
+      <find>elStorage</find>
+      <find>AUTO_INITIALIZE_EASYLOGGINGPP</find>
+      <find>co</find>
+      <find>std::cout</find>
+      <find>DEBUG</find>
+      <find>Debug</find>
+      <find>info</find>
+      <find>onRecvData</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -232,7 +325,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Network/Channel.h" />
         <option value="$PROJECT_DIR$/Network/Common.h" />
         <option value="$PROJECT_DIR$/Network/Socket.h" />
         <option value="$PROJECT_DIR$/Network/Socket.cpp" />
@@ -263,26 +355,27 @@
         <option value="$PROJECT_DIR$/Components/Network/Poller.h" />
         <option value="$PROJECT_DIR$/Components/Network/Poller.cpp" />
         <option value="$PROJECT_DIR$/Components/Network/Listener.h" />
-        <option value="$PROJECT_DIR$/Components/Network/SelectPoller.cpp" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Components/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Common/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Components/Network/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Components/Network/NetworkComponent.h" />
         <option value="$PROJECT_DIR$/Components/Network/Bundle.cpp" />
         <option value="$PROJECT_DIR$/Components/Network/NetworkComponent.cpp" />
         <option value="$PROJECT_DIR$/Common/unique_ptr.h" />
-        <option value="$PROJECT_DIR$/Components/Network/Listener.cpp" />
-        <option value="$PROJECT_DIR$/Components/Network/Channel.cpp" />
         <option value="$PROJECT_DIR$/Components/Network/Channel.h" />
         <option value="$PROJECT_DIR$/Components/Network/Endpoint.cpp" />
-        <option value="$PROJECT_DIR$/Components/Network/Packet.cpp" />
-        <option value="$PROJECT_DIR$/Common/Common.h" />
         <option value="$PROJECT_DIR$/Common/ObjectPool.h" />
-        <option value="$PROJECT_DIR$/Components/Network/Packet.h" />
-        <option value="$PROJECT_DIR$/Components/Network/Bundle.h" />
         <option value="$PROJECT_DIR$/Components/Network/Endpoint.h" />
+        <option value="$PROJECT_DIR$/Components/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Components/Log/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Common/Common.h" />
+        <option value="$PROJECT_DIR$/Components/Network/Listener.cpp" />
+        <option value="$PROJECT_DIR$/Components/Network/Bundle.h" />
+        <option value="$PROJECT_DIR$/Components/Network/SelectPoller.cpp" />
+        <option value="$PROJECT_DIR$/Components/Network/Packet.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Components/Network/Packet.cpp" />
+        <option value="$PROJECT_DIR$/Components/Network/Channel.cpp" />
       </list>
     </option>
   </component>
@@ -294,8 +387,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-146" />
-    <option name="y" value="35" />
+    <option name="x" value="2107" />
+    <option name="y" value="-11" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -327,11 +420,6 @@
             <path>
               <item name="Solo" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Solo" type="462c0819:PsiDirectoryNode" />
-              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Solo" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Solo" type="462c0819:PsiDirectoryNode" />
               <item name="Common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -345,11 +433,6 @@
               <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="Network" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Solo" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="Solo" type="462c0819:PsiDirectoryNode" />
-              <item name="Plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -362,12 +445,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Solo\Solo\Components\Network" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Solo\Solo\Components\Log" />
       <recent name="E:\Solo\Solo\Components" />
       <recent name="E:\Solo\Solo\Plugins" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Solo\Solo\Components\Log" />
+      <recent name="E:\Solo\Solo\Components\Network" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,16 +471,20 @@
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Solo" TARGET_NAME="Solo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Solo" RUN_TARGET_NAME="Solo">
       <envs />
     </configuration>
+    <configuration name="LogDLL" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Solo" TARGET_NAME="LogDLL" CONFIG_NAME="Debug">
+      <envs />
+    </configuration>
     <configuration name="NetworkLib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Solo" TARGET_NAME="NetworkLib" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Solo" RUN_TARGET_NAME="Solo">
       <envs />
     </configuration>
     <configuration name="Solo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Solo" TARGET_NAME="Solo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Solo" RUN_TARGET_NAME="Solo">
       <envs />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.Solo" />
-      <item index="2" class="java.lang.String" itemvalue="Application.NetworkLib" />
+      <item index="2" class="java.lang.String" itemvalue="Application.LogDLL" />
+      <item index="3" class="java.lang.String" itemvalue="Application.NetworkLib" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -428,7 +517,7 @@
       <workItem from="1516965506430" duration="68274000" />
       <workItem from="1517036054904" duration="10994000" />
       <workItem from="1517193783015" duration="8867000" />
-      <workItem from="1517281025737" duration="18190000" />
+      <workItem from="1517281025737" duration="22324000" />
     </task>
     <task id="LOCAL-00001" summary="5">
       <created>1516793320788</created>
@@ -563,29 +652,36 @@
       <option name="project" value="LOCAL" />
       <updated>1517311700683</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="5">
+      <created>1517312581232</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1517312581232</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204102000" />
+    <option name="totallyTimeSpent" value="208236000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4825708" sideWeight="0.7135417" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30827886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28213507" sideWeight="0.59791666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4825708" sideWeight="0.6692708" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30827886" sideWeight="0.49583334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32897604" sideWeight="0.42864582" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897604" sideWeight="0.46041667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32897604" sideWeight="0.57135415" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13802083" sideWeight="0.4935065" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.13802083" sideWeight="0.5064935" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28213507" sideWeight="0.40208334" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28213507" sideWeight="0.7026042" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -617,25 +713,16 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="36" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="this" />
+        <watch expression="packet" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Network/Pakcet.cpp" />
-    <entry file="file://$PROJECT_DIR$/Network/Pakcet.h" />
-    <entry file="file://$PROJECT_DIR$/Components/CMakeList.txt" />
     <entry file="file://$PROJECT_DIR$/Components/Component.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -665,14 +752,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/Network/Poller.cpp.cpp" />
-    <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/shared_ptr_base.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -692,34 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="320" column="36" lean-forward="false" selection-start-line="320" selection-start-column="8" selection-end-line="320" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/functional">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="226" column="0" lean-forward="false" selection-start-line="226" selection-start-column="0" selection-end-line="226" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#39#64#0" expanded="true" />
-            <element signature="e#1207#1246#0" expanded="true" />
-            <element signature="e#1721#1761#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,26 +830,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/NetworkComponent.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/type_traits">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="70" column="44" lean-forward="false" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -813,22 +848,6 @@
             <marker date="1516943254676" expanded="true" signature="336:377" ph="..." />
             <marker date="1516943254676" expanded="true" signature="394:434" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Listener.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Channel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,22 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="215" column="21" lean-forward="false" selection-start-line="215" selection-start-column="8" selection-end-line="215" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Datetime.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Packet.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -891,44 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/unique_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#92#109#0" expanded="true" />
-            <element signature="e#165#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="9" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/Common.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="6" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-          <folding>
-            <element signature="e#84#105#0" expanded="true" />
-            <element signature="e#419#431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Common/Singleton.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -937,48 +902,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Components/Network/Packet.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#84#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/tuple">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="350" column="0" lean-forward="false" selection-start-line="350" selection-start-column="0" selection-end-line="350" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-          <folding>
-            <element signature="e#1693#1707#0" expanded="true" />
-            <element signature="e#2028#2122#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -995,25 +923,202 @@
         <state relative-caret-position="201">
           <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
           <folding>
-            <element signature="e#264#276#0" expanded="true" />
-            <element signature="e#339#382#0" expanded="true" />
-            <element signature="e#1928#1940#0" expanded="true" />
+            <element signature="e#264#276#0" expanded="false" />
+            <element signature="e#339#382#0" expanded="false" />
+            <element signature="e#1928#1940#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#92#109#0" expanded="false" />
+            <element signature="e#165#208#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Channel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="50" column="13" lean-forward="false" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/Network/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="180">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Log/easylogging++.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="41" />
+          <folding>
+            <element signature="e#465#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Log/easylogging++.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="2763" column="46" lean-forward="false" selection-start-line="2763" selection-start-column="46" selection-end-line="2763" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Log/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Datetime.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="48" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/Common.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/include/wingdi.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1298">
+          <caret line="351" column="19" lean-forward="false" selection-start-line="351" selection-start-column="8" selection-end-line="351" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Bundle.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Endpoint.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/NetworkComponent.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/SelectPoller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <element signature="e#39#64#0" expanded="true" />
+            <element signature="e#1157#1196#0" expanded="true" />
+            <element signature="e#1671#1711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/functional">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="603" column="0" lean-forward="false" selection-start-line="603" selection-start-column="0" selection-end-line="603" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="302" column="0" lean-forward="false" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Packet.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Packet.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -1022,8 +1127,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/Network/Channel.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
+        <state relative-caret-position="309">
+          <caret line="79" column="26" lean-forward="false" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/Network/Listener.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding />
         </state>
       </provider>

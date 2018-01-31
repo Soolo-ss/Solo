@@ -66,8 +66,6 @@ namespace solo
     private:
         void CreatePacket()
         {
-            std::cout << "new" << std::endl;
-
             auto newPacket = Singleton< ObjectPool<Packet> >::getInstance().createObject();
 
             packets_.push_back(std::move(newPacket));

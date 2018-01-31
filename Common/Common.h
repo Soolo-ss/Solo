@@ -22,6 +22,8 @@
 #include "ObjectPool.h"
 #include "unique_ptr.h"
 
+#include "../Components/Log/easylogging++.h"
+
 #define datetimeMgr solo::Singleton<solo::Datetime>::getInstance()
 
 template <typename T>

@@ -28,26 +28,25 @@ namespace solo
     {
         if (ep_.setNonBlocking() < 0)
         {
-            std::cout << WSAGetLastError() << std::endl;
-
+            LOG(ERROR) << "Socket set nonblocking failed";
             return;
         }
 
         if (ep_.setNoDalay() < 0)
         {
-            std::cout << "set delay error" << std::endl;
+            LOG(ERROR) << "Socket set delay error";
             return;
         }
 
         if (ep_.setReuseAddr() < 0)
         {
-            std::cout << "set reuse addr error" << std::endl;
+            LOG(ERROR) << "Socket set reuse addr error";
             return;
         }
 
         if (ep_.bind() < 0)
         {
-            std::cout << "bind error" << std::endl;
+            LOG(ERROR) << "Socket bind error";
             return;
         }
 
@@ -55,7 +54,7 @@ namespace solo
 
         if (ep_.listen() < 0)
         {
-            std::cout << "listen error" << std::endl;
+            LOG(ERROR) << "Socket listen error";
             return;
         }
     }
@@ -63,7 +62,7 @@ namespace solo
     void Listener::registeToPoller(Poller* poller)
     {
         if (!poller->registeReadEvent(ep_.fd(), std::bind(&accpetHandler, this, std::placeholders::_1)))
-            std::cout << "error to registe read event " << std::endl;
+            LOG(ERROR) << "Listener::registeToPoller Failed";
     }
 
     void Listener::accpetHandler(int fd)
